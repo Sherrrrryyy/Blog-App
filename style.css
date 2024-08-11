@@ -1,0 +1,238 @@
+.modal .modal-dialog {
+    min-width: 800px;
+}
+
+
+/*NAVBAR*/
+
+*{
+    font-family: poppins;
+}
+
+.nav {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-content h1 {
+    font-size: 30px;
+    margin: 0 20px 0 15px;
+}
+
+.nav-content a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    padding-left: 15px;
+}
+
+.nav-content a:hover {
+    font-weight: bold;
+}
+
+.nav-btn {
+    margin-right: 20px;
+}
+
+
+/*HERO SEC*/
+
+.main {
+    padding: 60px;
+    height: 500px;
+    width: 100%;
+    background-color: #2f40ac;
+}
+
+.main-big-h {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    padding-bottom: 20px;
+    padding-top: 60px;
+}
+
+.main-big-h h1 {
+    font-size: 60px;
+    color: #fff;
+
+}
+
+.main-p {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.main-p p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.main-btn {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    padding: 25px;
+}
+
+.main-btn button {
+    width: 200px;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 35px;
+    font-weight: bold;
+    background-color: #fff;
+    border: none;
+    color: #000;
+}
+
+
+/*SIGNUP PAGE STYLING*/
+
+.container {
+    flex-wrap: nowrap;
+    background-color: #2f40ac;
+    display: flex;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 8px;
+    justify-content: center;
+/* border: 1px solid red; */
+}
+.main-content{
+/* border: 1px solid red; */
+    padding: 20px;
+}
+.main-content h1{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+}
+.main-content p{
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.main-content p a{
+    padding: 2px 0 0 10px;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+.input{
+    padding: 40px;
+}
+.input label{
+    color: #fff;
+    font-size: 16px;
+padding: 12px 0 0 12px;
+}
+.input input{
+    background-color: #fff;
+    color: black;
+    width: 400px;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+}
+.input input::placeholder{
+    color: grey;
+
+}
+.input button{
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    margin-top: 30px;
+    border-radius: 8px;
+    color: #000 ;
+    padding: 10px;
+}
+.input button:hover{
+    color: #5371d4;
+    background-color: #fff;
+    transition: all ease 0.5s ;
+}
+
+
+
+
+@media (max-width:768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .parent {
+        display: inline;
+        justify-content: center;
+    }
+    .input input{
+        width: 400px;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        max-width: 400px;
+    }
+
+    .parent {
+
+        display: inline;
+        justify-content: center;
+    }
+
+    .input input {
+        display: inline;
+        justify-content: center;
+        width: 350px;
+    }
+
+    .input button {
+
+        width: 100%;
+
+    }
+}
+
+@media (max-width:360px) {
+    .container {
+        max-width: 320px;
+    }
+
+    .input {
+        flex-wrap: wrap;
+    }
+
+    .input input {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+width: 130px;
+    }
+
+    .input button {
+
+        width: 100%;
+
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!--NAVBAR-->
+
+<div class="nav">
+  <div class="nav-content">
+    <h1><a href="./index.html"></a>My Blog</h1>
+    <a href="">Home</a>
+    <a href="">User Profile</a>
+  </div>
+  <div class="nav-btn">
+    <button  data-bs-toggle="modal"
+      data-bs-target="#createBlog" style="width: 150px; padding: 8px; ; font-weight: bold; background-color: #2f40ac; border: none; color: white;">Create Blog</button>
+    <a href="./pages/signup.html"><button style="width: 150px; padding: 8px; font-weight: bold; background-color: #2f40ac; border: none; color: white;">Get Started</button></a>
+  </div>
+</div>
+
+
+    <!--HERO SECTION-->
+    <div class="main">
+      <div class="main-big-h">
+        <h1>Create a blog with us</h1>
+      </div>
+      <div class="main-p">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, soluta.</p>
+      </div>
+      <div class="main-btn">
+        <a href="./pages/signup.html"><button id="getBitton" 
+          data-bs-toggle="modal"
+      data-bs-target="#createBlog">Get Started</button></a>
+      </div>
+    
+    </div>
+
+
+    <div class="Blogcontainer mt-5" >
+        <div class="row m-0" id="parent">
+          <!-- <div class="col-lg-6 col-md-12 col-sm-12 my-2">
+            <div class="card">
+              <h5 class="card-header">
+                <img
+                  src="https://picsum.photos/seed/picsum/200/300"
+                  width="100%"
+                  height="300px"
+                  alt=""
+                />
+              </h5>
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+
+<!--MODAL-->
+
+  <div class="modal fade" id="createBlog"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Blog</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div >
+                <label>Title</label>
+                <input style="width: 100%; padding: 5px; border-radius: 5px; outline: none;" type="text" id="input">
+            </div>
+            <div >
+                <label>Blog Content</label>
+                <textarea style="width: 100%; outline: none; border-radius: 5px; " rows="4" id="content"></textarea>
+            </div>
+            <div>
+                <input id="image" type="file">
+            </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheck"
+            />
+            <label class="form-check-label" for="flexSwitchCheck"
+              >Private Post</label
+            >
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="saveBlog" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+
+    
+
+
+</body>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+<script src="./app.js" type="module"></script>
+
+</html>
