@@ -1,4 +1,4 @@
-window.addEventListener("click", ()=>{
+window.addEventListener("load", ()=>{
   if(localStorage.getItem("user")){
       window.location.href = "./login.html"
   }
@@ -33,7 +33,7 @@ console.log(uid);
 localStorage.setItem("user", uid)
 
     // const userResponse = await setDoc(doc(db, "users", uid), userObj);
-    // window.location.href = "../login.html"   
+    window.location.href = "../login.html"   
 
 
   } catch (error) {

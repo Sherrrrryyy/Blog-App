@@ -1,5 +1,5 @@
 window.addEventListener("load", ()=>{
-    if(!localStorage.getItem("user")){
+    if(localStorage.getItem("user")){
         window.location.replace("./signup.html")
     }
 })

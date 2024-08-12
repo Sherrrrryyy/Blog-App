@@ -50,8 +50,12 @@
 .main {
     padding: 60px;
     height: 500px;
-    width: 100%;
-    background-color: #2f40ac;
+    width: 100%vh;
+    background-image: url(./img/depositphotos_64095317-stock-pho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 .main-big-h {
@@ -64,7 +68,7 @@
 
 .main-big-h h1 {
     font-size: 60px;
-    color: #fff;
+    color: #000;
 
 }
 
@@ -78,7 +82,7 @@
 
 .main-p p {
     font-size: 15px;
-    color: #fff;
+    color: #000;
 }
 
 .main-btn {
@@ -88,8 +92,8 @@
     padding: 25px;
 }
 
-.main-btn button {
-    width: 200px;
+.main-btn h1 {
+
     font-size: 16px;
     padding: 20px;
     border-radius: 35px;

@@ -1,7 +1,5 @@
 window.addEventListener("load", ()=>{
-    if(!localStorage.getItem("user")){
-        window.location.href = "../pages/signup.html"
-    }
+  
   })
   
 
@@ -18,6 +16,16 @@ import {
     getDocs,
 } from "./js/fb.js";
 
+
+const createBlogBtn = document.getElementById("modalNotCreate");
+
+createBlogBtn.addEventListener("click", (e) => {
+  if (!localStorage.getItem("user")) {
+    e.preventDefault(); 
+    alert("You need to sign up or log in to create a blog.");
+    window.location.href = "./pages/signup.html"; 
+  }
+});
 
 
 
@@ -45,8 +53,8 @@ window.addEventListener("load", async () => {
         })
         console.log(tempArr);
 
+        parent.innerHTML = ""
 renderUI(tempArr)
-
 })
 
 
@@ -62,14 +70,12 @@ const flexSwitchCheck = document.getElementById("flexSwitchCheck")
 const saveBlog = document.getElementById("saveBlog")
 saveBlog.addEventListener("click", async () => {
 
-    // console.log("Title ", input.value);
-    // console.log("content", content.value);
-    // console.log("Image", image.files[0]);
-    const img = image.files[0]
+    const blogValue = input.value
+    const blogContent = content.value
     const imageUrl = await uploadImage(image.files[0]);
     const blogObj = {
-        title: input.value,
-        content: content.value,
+        title: blogValue,
+        content: blogContent,
         imageUrl: imageUrl,
         uid: uid,
         isPrivate: flexSwitchCheck.checked,
@@ -82,6 +88,7 @@ saveBlog.addEventListener("click", async () => {
 })
 
 const renderUI = (tempArr)=>{
+ 
 
 for(const value of tempArr)
     parent.innerHTML += `<div class="col-lg-6 col-md-12 col-sm-12 my-2">
@@ -95,25 +102,25 @@ for(const value of tempArr)
                 />
               </h5>
               <div class="card-body">
-                <h5 class="card-title">${value.input}</h5>
+                <h5 class="card-title">${value.title}</h5>
                 <p class="card-text">
                   ${value.content}
                 </p>
-<buttom>Edit</buttom>
-<buttom>Delete</buttom>
-
+                <button style="width: 150px; padding: 8px; font-weight: bold; background-color: #2f40ac; border: none; color: white;">Read Blog</button>
                 </div>
             </div>
           </div>`
-
+          
 }
+
+
 
 const uploadImage = (file) => {
 
     return new Promise((resolve, reject) => {
 
         const metadata = {
-            contentType: 'image/jpeg'
+            contentType: 'images/'
         };
 
         // Upload file and metadata to the object 'images/mountains.jpg'
