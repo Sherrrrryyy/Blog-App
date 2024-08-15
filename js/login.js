@@ -23,7 +23,7 @@ btn.addEventListener("click", async () => {
         const res = await signInWithEmailAndPassword(auth, email.value, password.value);
         console.log("Login successfully:", res);
         localStorage.setItem("user", res.user.uid)
-        window.location.href = "../index.html"        
+        window.location.replace("../index.html")        
 
     } catch (error) {
         alert(`This user can not exist: ${error.message}`);

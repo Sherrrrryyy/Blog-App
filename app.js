@@ -1,7 +1,3 @@
-window.addEventListener("load", ()=>{
-  
-  })
-  
 
 import {
     storage,
@@ -14,6 +10,8 @@ import {
     getDoc,
     doc,
     getDocs,
+    updateDoc,
+    deleteDoc,
 } from "./js/fb.js";
 
 
@@ -106,11 +104,45 @@ for(const value of tempArr)
                 <p class="card-text">
                   ${value.content}
                 </p>
-                <button style="width: 150px; padding: 8px; font-weight: bold; background-color: #2f40ac; border: none; color: white;">Read Blog</button>
+                <button id="${value.id}" onclick="editBlog(this)" style="width: 150px; padding: 8px; font-weight: bold; background-color: #2f40ac; border: none; color: white;">Edit Blog</button>
+                <button id="${value.id}" onclick="deleteBlog(this)" style="width: 150px; padding: 8px; font-weight: bold; background-color: #2f40ac; border: none; color: white;">Delete Blog</button>
+
                 </div>
             </div>
           </div>`
           
+}
+
+
+const editBlog = async (ele)=>{
+  try {
+    console.log("Hello", ele.id);
+
+    const titleEdit = prompt("Title Edit krlo")
+    const contentEdit = prompt("Content Edit krlo")
+    await updateDoc(doc(db,"blogs",ele.id),{
+      title : titleEdit,
+      content : contentEdit
+    })
+
+  } catch (error) {
+    alert(error)
+  }
+
+}
+
+
+
+const deleteBlog = async (ele)=>{
+  try {
+    console.log('hello',ele.id);
+
+    const dlt = await deleteDoc(doc(db,"blogs",ele.id))
+
+
+  } catch (error) {
+    alert(error)
+  }
 }
 
 
@@ -158,8 +190,8 @@ const uploadImage = (file) => {
 
 
     })
-
-
-
-
 }
+
+
+window.editBlog = editBlog
+window.deleteBlog = deleteBlog
